@@ -1,37 +1,40 @@
-## House Prices - Tensorflow Random Forest
+## Random Forest Implementation - Tensorflow
 ### Project #2
 
-This project is part of the "100 Days to Get Hired" challenge. 
+This project continues the work from the first project, exploring different models beyond AutoGluon. Today, the focus is on implementing a Random Forest using TensorFlow.
 
-For my first project, I chose the well-known House Prices challenge on Kaggle. The tool used for the prediction will be autoGluon. 
+TensorFlow is a widely-used Python library for running artificial intelligence models, providing tools for both training and inference.
 
 **Project Goals** 
 
-* Explore and understand the dataset provided.
-* Apply feature engineering techniques to improve model performance.
-* Utilize autoGluon to build and optimize a regression model.
-* Submit predictions to Kaggle and evaluate the results.
+* Continue the exploration of the dataset from the previous project.
+* Implement a Random Forest model using TensorFlow.
+* Compare the performance of the Random Forest model against the AutoGluon model.
+* Evaluate the model's effectiveness and analyze the results.
 
 **Dataset**
 
-The dataset can be found [here](https://www.kaggle.com/competitions/house-prices-advanced-regression-techniques)
+The dataset used in this project is the same as in the previous challenge. For details, refer to the earlier project documentation.
 
 **Tools and Technologies**
 
 * Python
+* TensorFlow
 * Pandas
 * NumPy
 * Scikit-learn
-* autoGluon
+
+**Random Forest Overview**
+
+Random Forest is a technique used for classification or regression tasks. It works by creating multiple decision trees and using either majority voting (for classification) or averaging the predictions (for regression) from those trees. Random Forest is known for its high accuracy and robustness against overfitting, making it a popular choice in various practical applications.
 
 ### Conclusion
 
-AutoGluon is an AutoML tool that internally includes data preprocessing, model training, and the comparison of various models, including LightGBM, CatBoost, XGBoost, Random Forest, ExtraTrees, Neural Networks, K-Nearest Neighbors, Linear Models, and Weighted Ensembling. After training on all relevant models, AutoGluon compares the results and selects the model that offers the best performance.
-
-However, the results were not acceptable. The graph below suggests a discrepancy between the actual and predicted values. Moreover, the correlation between the two variables was calculated to be 0.29, indicating a significant distance between them.
+The correlation increased from 0.29 to 0.305 as observed on the figure below, which is not a significant improvement. The issue might be more related to data preprocessing rather than the model itself. After all, data science relies heavily on the quality of the data rather than the model used. Therefore, proper data engineering should be applied beforehand to achieve significant improvements. Once data preprocessing is thoroughly done, the model should be adjusted or replaced to compare results effectively.
 
 ![output](output/output.png)
 
 ### Next Steps
 
-The next step is to manually preprocess the data and use AutoGluon only for model training. This approach will allow for more control over the data preparation process, which could improve the model's performance by addressing specific issues within the dataset that may not have been adequately handled by the automatic preprocessing.
+The next steps involve focusing on data preprocessing to address any issues within the dataset. After refining the data, the model should be reevaluated, and potentially new models should be tested to achieve better performance.
+
